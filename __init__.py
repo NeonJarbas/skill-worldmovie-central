@@ -25,12 +25,12 @@ class WorldMovieCentralSkill(OVOSCommonPlaybackSkill):
         genre = ["horror", "action", "thriller", "Comedy", "Drama"]
 
         for url, data in self.archive.items():
-            t = data["title"].split("|")[0].split("(")[0]
+            t = data["title"].split("|")[0].split("(")[0].strip()
             title.append(t)
             if ":" in t:
                 t1, t2 = t.split(":", 1)
-                title.append(t1)
-                title.append(t2)
+                title.append(t1.strip())
+                title.append(t2.strip())
 
         self.register_ocp_keyword(MediaType.MOVIE,
                                   "movie_name", title)
