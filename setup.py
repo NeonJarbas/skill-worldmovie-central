@@ -14,7 +14,7 @@ setup(
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
     package_dir={"skill_worldmovie_central": ""},
-    package_data={'skill_worldmovie_central': ['locale/*', 'ui/*']},
+    package_data={'skill_worldmovie_central': ['locale/*', 'res/*']},
     packages=['skill_worldmovie_central'],
     include_package_data=True,
     install_requires=["ovos_workshop~=0.0.5a1"],
